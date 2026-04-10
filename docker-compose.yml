@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  controller:
+    build: ./controller
+    ports:
+      - "5000:5000"
+
+  agent:
+    build: ./agent
+    depends_on:
+      - controller
